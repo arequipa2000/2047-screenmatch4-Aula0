@@ -38,8 +38,14 @@ public class PrincipalConBusqueda {
 
         System.out.println(miTituloOmdb);
 
-        Titulo miTitulo = new Titulo(miTituloOmdb);
+        try {
+            Titulo miTitulo = new Titulo(miTituloOmdb);
+            System.out.println(miTitulo);
+        }catch (NumberFormatException e){
+            System.out.println("Ocurrio un error.");
+            System.out.println(e.getMessage());
+        }
 
-        System.out.println(miTitulo);
+        System.out.println("Finalizo el programa.");
     }
 }
